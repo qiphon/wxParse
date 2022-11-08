@@ -1,6 +1,1 @@
-{
-  "component":true,
-  "usingComponents":{
-    "wxParse":"./wxParse"
-  }
-}
+{"component":true,"usingComponents":{"wxParse":"./wxParse","wxAudio":"../wxAudio/wxAudio"}}

@@ -22,7 +22,32 @@
 
 ### changed 
 
-- 由于当前版本不能够控制内部样式，所以额外添加了外部类名注入     externalClasses: ['parse-wrapper'],
+#### v1.0.7
+
+- 由于当前版本不能够控制内部样式，所以额外添加了外部类名注入     externalClasses: ['parse-wrapper'],  `<wxParse wrapperClass="color-red" nodes="{{ article.nodes }}" />`
+
+```js
+const selfClasses = {
+  wrapper: 'wrapper-class',
+  button: 'q-button',
+  ol: 'q-ol',
+  ul: 'q-ul',
+  li: 'q-li',
+  video: 'q-video',
+  imginner: 'q-imginner',
+  a: 'q-a',
+  table: 'q-table',
+  tr: 'q-tr',
+  td: 'q-td',
+  audio: 'q-audio',
+  hr: 'q-hr',
+  block: 'q-block',
+  inline: 'q-inline',
+  text: 'q-text',
+}
+```
+- 取消a 链接的字体颜色
+- 去除 tbody margin，table 补充margin
 
 ## 功能标签
 

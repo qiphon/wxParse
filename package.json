@@ -1,6 +1,6 @@
 {
   "name": "rich-parse-bate",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "miniprogram_dist/index.js",
   "description": "由于原作者仓库 [wxParse](https://github.com/icindy/wxParse) 不再维护，我们项目中商品信息展示又是以wxParse这个用做富文本解析的；",
   "directories": {

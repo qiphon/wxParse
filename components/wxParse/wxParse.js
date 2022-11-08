@@ -3,8 +3,27 @@ import showdown from './utils/showdown.js';
 import { getSystemInfo, cacheInstance, getUniqueKey } from './utils/util';
 
 const BIND_NAME = 'wxParse'
-
+const selfClasses = {
+  wrapper: 'wrapper-class',
+  button: 'q-button',
+  ol: 'q-ol',
+  ul: 'q-ul',
+  li: 'q-li',
+  video: 'q-video',
+  imginner: 'q-imginner',
+  a: 'q-a',
+  table: 'q-table',
+  tr: 'q-tr',
+  td: 'q-td',
+  audio: 'q-audio',
+  hr: 'q-hr',
+  block: 'q-block',
+  inline: 'q-inline',
+  text: 'q-text',
+}
 Component({
+  /** 向外提供的类 */
+  externalClasses: Object.values(selfClasses),
   properties: {
     // 当前页面的page标识符
     pageKey: {
@@ -45,6 +64,9 @@ Component({
   },
 
   data: {
+    externalClass: {
+      ...selfClasses
+    },
     pageNodeKey: '',
     wxparseRootKey: '',
     nodesData: [],
