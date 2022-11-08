@@ -1,3 +1,0 @@
-<view class="hljs">
-  <rich-text nodes="{{code}}" space="nbsp"></rich-text>
-</view>
