@@ -1,23 +1,25 @@
 {
-  "name": "rich-parse",
+  "name": "rich-parse-bate",
   "version": "1.0.6",
-  "main": "index.js",
+  "main": "miniprogram_dist/index.js",
   "description": "由于原作者仓库 [wxParse](https://github.com/icindy/wxParse) 不再维护，我们项目中商品信息展示又是以wxParse这个用做富文本解析的；",
   "directories": {
     "doc": "docs"
   },
-  "miniprogram": "dist",
+  "miniprogram": "miniprogram_dist",
   "files": [
-    "dist"
+    "miniprogram_dist"
   ],
   "scripts": {
     "pack:wxAudio": "node build wxAudio",
     "pack:highLight": "node build highLight",
+    "build:dist": "gulp --gulpfile script/gulpfile.dist.js --cwd ./",
+    "dev": "cross-env NODE_ENV=development gulp dev --gulpfile script/gulpfile.js --cwd ./",
     "build": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/csonchen/wxParse.git"
+    "url": "git+https://github.com/qiphon/wxParse.git"
   },
   "author": "cson_chensheng@163.com",
   "license": "MIT",
@@ -26,11 +28,23 @@
   },
   "homepage": "https://github.com/csonchen/wxParse#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "del": "^5.1.0",
     "event-stream": "^4.0.1",
     "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-if": "^3.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-mp-npm": "^1.10.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-replace-task": "^2.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "gulp-uglify-es": "^2.0.0",
+    "typescript": "^4.8.4"
   }
 }
